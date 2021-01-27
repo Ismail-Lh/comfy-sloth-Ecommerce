@@ -10,6 +10,7 @@ export const Wrapper = styled.footer`
   text-align: center;
   span {
     color: var(--clr-primary-5);
+    margin: 0 3px;
   }
   h5 {
     color: var(--clr-white);
@@ -19,6 +20,17 @@ export const Wrapper = styled.footer`
     text-transform: none;
     line-height: 1.25;
   }
+
+  a{
+    color: var(--clr-white);
+
+    &:hover{
+      color: var(--clr-primary-5); 
+    }
+  }
+
+  
+
   @media (min-width: 776px) {
     flex-direction: row;
   }

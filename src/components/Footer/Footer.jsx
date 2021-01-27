@@ -3,9 +3,13 @@ import { Wrapper } from './FooterStyles';
 
 function Footer () {
    return (
-      <h1>
-         Footer!!!!
-      </h1>
+      <Wrapper>
+         <h5>&copy; {new Date().getFullYear()}
+            <span>ComfySloth.</span>
+            All right reserved. Devloped by
+         </h5>
+         <a href="https://twitter.com/lhbibe_ismail" target="_blank" rel="noopener noreferrer">Ismail Lahbiyeb .</a>
+      </Wrapper>
    );
 }
 
