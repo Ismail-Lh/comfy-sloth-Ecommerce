@@ -24,6 +24,7 @@ justify-content: center;
   background: transparent;
   border: transparent;
   color: var(--clr-primary-5);
+  outline: 0;
   cursor: pointer;
   svg {
     font-size: 2rem;
@@ -53,11 +54,12 @@ justify-content: center;
     a {
       color: var(--clr-grey-3);
       font-size: 1rem;
+      font-weight: 500; 
       text-transform: capitalize;
       letter-spacing: var(--spacing);
       padding: 0.5rem;
       &:hover {
-        border-bottom: 2px solid var(--clr-primary-7);
+        border-bottom: 3px solid var(--clr-primary-7);
       }
     }
   }

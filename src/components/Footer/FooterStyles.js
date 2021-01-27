@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import style from 'styled-components/macro';
 
-export const Wrapper = style.footer`
+export const Wrapper = styled.footer`
   height: 5rem;
   display: flex;
   flex-direction: column;
