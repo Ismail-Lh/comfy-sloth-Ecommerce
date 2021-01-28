@@ -5,7 +5,7 @@ import { FaBars } from 'react-icons/fa';
 
 import { NavContainer } from './NavbarStyles';
 import logo from '../../assets/logo.svg';
-import { links } from '../../utils/constanst';
+import { links } from '../../utils/constants';
 import { CartButtons } from '..';
 
 function Navbar () {

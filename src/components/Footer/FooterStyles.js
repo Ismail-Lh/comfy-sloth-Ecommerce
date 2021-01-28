@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Wrapper = styled.footer`
   height: 5rem;
@@ -10,7 +10,6 @@ export const Wrapper = styled.footer`
   text-align: center;
   span {
     color: var(--clr-primary-5);
-    margin: 0 3px;
   }
   h5 {
     color: var(--clr-white);
@@ -22,14 +21,16 @@ export const Wrapper = styled.footer`
   }
 
   a{
-    color: var(--clr-white);
+    color: var(--clr-primary-5);
+    border-bottom: 2px solid transparent;
 
     &:hover{
-      color: var(--clr-primary-5); 
+      color: var(--clr-white);
+      border-bottom: 2px solid var(--clr-primary-5);
     }
   }
 
-  
+
 
   @media (min-width: 776px) {
     flex-direction: row;
