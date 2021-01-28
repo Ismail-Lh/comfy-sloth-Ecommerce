@@ -1,4 +1,4 @@
-import { useContext, createContext, useReducer, useEffect } from "react";
+import React, { useContext, createContext, useReducer, useEffect } from "react";
 
 import ProductsReducer from "../reducers/products_reducer";
 import {

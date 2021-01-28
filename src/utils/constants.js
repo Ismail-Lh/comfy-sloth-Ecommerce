@@ -1,3 +1,4 @@
+import React from 'react';
 import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi';
 
 export const links = [
