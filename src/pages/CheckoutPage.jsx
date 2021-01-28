@@ -1,11 +1,19 @@
 import React from 'react';
+import styled from 'styled-components/macro'
+
+import {PageHero} from '../components'
 
 function CheckoutPage () {
    return (
-      <h1>
-         Checkout page !!!!
-      </h1>
+      <main>
+         <PageHero title='Checkout'/>
+         <Wrapper className="page">
+            <h1>Checkout Page</h1>
+         </Wrapper>
+      </main>
    );
 }
+
+const Wrapper = styled.div``;
 
 export default CheckoutPage;
