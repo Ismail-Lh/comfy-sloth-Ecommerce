@@ -7,3 +7,6 @@ export { default as FeaturedProducts } from "./FeaturedProducts/FeaturedProducts
 export { default as Hero } from "./Hero/Hero";
 export { default as Services } from "./Services/Services";
 export { default as Contact } from "./Contact/Contact";
+export {default as Loading} from './Loading/Loading';
+export {default as Error} from './Error/Error';
+export {default as Product} from './Product/Product';
