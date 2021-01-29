@@ -13,7 +13,7 @@ import {
 	Cart
 } from "./pages";
 
-function App() {
+function App () {
 	return (
 		<Router>
 			<Navbar />

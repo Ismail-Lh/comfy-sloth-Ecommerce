@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react";
 
-export default function HomePage () {
-   return (
-      <h1>
-         Home Page
-      </h1>
-   );
-}
+import { FeaturedProducts, Services, Hero, Contact } from "../components";
+
+const HomePage = props => {
+	return (
+		<main>
+			<Hero />
+			<FeaturedProducts />
+			<Services />
+			<Contact />
+		</main>
+	);
+};
+
+export default HomePage;
