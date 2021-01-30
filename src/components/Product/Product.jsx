@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 
 import { Wrapper } from "./ProductStyles";
+import { formatPrice } from "../../utils/helpers.js";
 
 const Product = ({ name, image, price, id }) => {
 	return (
@@ -15,7 +16,7 @@ const Product = ({ name, image, price, id }) => {
 			</div>
 			<footer>
 				<h5>{name}</h5>
-				<p>{price}</p>
+				<p>{formatPrice(price)}</p>
 			</footer>
 		</Wrapper>
 	);
