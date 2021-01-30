@@ -21,7 +21,10 @@ const initialState = {
 	products_loading: false,
 	products_error: false,
 	all_products: [],
-	featured_products: []
+	featured_products: [],
+	single_product_loading: false,
+	single_product_error: false,
+	single_product: {}
 };
 
 export const ProductsProvider = ({ children }) => {
@@ -46,6 +49,22 @@ export const ProductsProvider = ({ children }) => {
 			dispatch({ type: GET_PRODUCTS_SUCCESS, payload: productsData });
 		} catch (err) {
 			dispatch({ type: GET_PRODUCTS_ERROR });
+		}
+	};
+
+	const fetchSingleProduct = async url => {
+		dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
+
+		try {
+			const res = await axios.get(url);
+			const singleProductData = res.data;
+
+			dispatch({
+				type: GET_SINGLE_PRODUCT_SUCCESS,
+				payload: singleProductData
+			});
+		} catch (err) {
+			dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
 		}
 	};
 
