@@ -8,7 +8,7 @@ const Stars = ({ stars, reviews }) => {
 		const num = idx + 0.5;
 
 		return (
-			<span>
+			<span key={idx}>
 				{stars >= idx + 1 ? (
 					<BsStarFill />
 				) : stars >= num ? (
