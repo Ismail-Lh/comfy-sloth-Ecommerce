@@ -13,3 +13,4 @@ export {default as Product} from './Product/Product';
 export {default as ProductImages} from './ProductImages/ProductImages';
 export {default as Stars} from './Stars/Stars';
 export {default as AddToCart} from './AddToCart/AddToCart';
+export {default as AmountButtons} from './AmountButtons/AmountButtons';

@@ -25,7 +25,7 @@ export const Wrapper = styled.section`
 		border: none;
 		cursor: pointer;
 		opacity: 0.5;
-		outline:0;
+		outline: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -36,6 +36,7 @@ export const Wrapper = styled.section`
 	}
 	.active {
 		opacity: 1;
+		transform: scale(1.1);
 	}
 	.btn-container {
 		margin-top: 2rem;
