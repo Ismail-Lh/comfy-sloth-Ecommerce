@@ -18,3 +18,4 @@ export {default as Filters} from './Filters/Filters';
 export {default as Sort} from './Sort/Sort';
 export {default as ProductList} from './ProductList/ProductList';
 export {default as GridView} from './GridView/GridView';
+export {default as ListView} from './ListView/ListView';
