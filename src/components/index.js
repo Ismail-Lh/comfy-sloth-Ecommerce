@@ -14,3 +14,7 @@ export {default as ProductImages} from './ProductImages/ProductImages';
 export {default as Stars} from './Stars/Stars';
 export {default as AddToCart} from './AddToCart/AddToCart';
 export {default as AmountButtons} from './AmountButtons/AmountButtons';
+export {default as Filters} from './Filters/Filters';
+export {default as Sort} from './Sort/Sort';
+export {default as ProductList} from './ProductList/ProductList';
+export {default as GridView} from './GridView/GridView';
