@@ -61,7 +61,6 @@ const FilterReducer = (state, action) => {
 	}
 
 	if (action.type === FILTER_PRODUCTS) {
-		console.log("filter products");
 		return { ...state };
 	}
 
