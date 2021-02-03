@@ -18,7 +18,17 @@ const initialState = {
 	filtered_products: [],
 	all_products: [],
 	grid_view: true,
-	sort: "price-lowest"
+	sort: "price-lowest",
+	filters: {
+		text: "",
+		company: "all",
+		category: "all",
+		color: "all",
+		max_price: 0,
+		min_price: 0,
+		price: 0,
+		shipping: false
+	}
 };
 
 const FilterContext = createContext();
