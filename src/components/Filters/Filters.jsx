@@ -84,6 +84,7 @@ const Filters = () => {
 									return (
 										<button
 											type="button"
+											key={idx}
 											name="color"
 											className={`${
 												color === "all" ? "all-btn active" : "all-btn"
@@ -95,6 +96,7 @@ const Filters = () => {
 										</button>
 									);
 								}
+
 								return (
 									<button
 										type="button"
@@ -112,6 +114,19 @@ const Filters = () => {
 								);
 							})}
 						</div>
+					</div>
+
+					<div className="form-control">
+						<h5>price</h5>
+						<p className="price">{formatPrice(price)}</p>
+						<input
+							type="range"
+							name="price"
+							value={price}
+							min={min_price}
+							max={max_price}
+							onChange={updateFilters}
+						/>
 					</div>
 				</form>
 			</div>
