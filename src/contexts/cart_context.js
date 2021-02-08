@@ -21,13 +21,29 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
+  // Add item to the cart
   const addToCart = (id, color, amount, product) => {
     // console.log(id, color, amount, product);
     dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
   };
 
+  // Remove item from the cart
+  const removeItem = (id) => {
+    console.log('remove Item');
+  };
+
+  const toggleAmount = (id, value) => {
+    console.log('Toggle amount');
+  };
+
+  // Clear the cart
+  const clearCart = () => {
+    console.log('Clear Cart');
+  };
+
   return (
-    <CartContext.Provider value={{ ...state, addToCart }}>
+    <CartContext.Provider
+      value={{ ...state, addToCart, removeItem, toggleAmount, clearCart }}>
       {children}
     </CartContext.Provider>
   );
