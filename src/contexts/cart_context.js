@@ -48,8 +48,9 @@ export const CartProvider = ({ children }) => {
     dispatch({ type: CLEAR_CART });
   };
 
-  // Add the cart item to localStorage API
+  // Add the cart item to localStorage API & count the items in the cart
   useEffect(() => {
+    dispatch({ type: COUNT_CART_TOTALS });
     localStorage.setItem('cart', JSON.stringify(state.cart));
   }, [state.cart]);
 
