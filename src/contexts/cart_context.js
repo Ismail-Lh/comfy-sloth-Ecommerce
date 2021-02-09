@@ -38,8 +38,9 @@ export const CartProvider = ({ children }) => {
     dispatch({ type: REMOVE_CART_ITEM, payload: id });
   };
 
+  // Toggle the product amount
   const toggleAmount = (id, value) => {
-    console.log('Toggle amount');
+    dispatch({ type: TOGGLE_CART_ITEM_AMOUNT, payload: { id, value } });
   };
 
   // Clear the cart

@@ -10,8 +10,13 @@ import { Wrapper } from './CartItemStyles';
 const CartItem = ({ id, name, image, price, color, amount }) => {
   const { removeItem, toggleAmount } = useCartContext();
 
-  const incr = () => {};
-  const decr = () => {};
+  const incr = () => {
+    toggleAmount(id, 'inc');
+  };
+
+  const decr = () => {
+    toggleAmount(id, 'dec');
+  };
 
   return (
     <Wrapper>
