@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
 
   // Remove item from the cart
   const removeItem = (id) => {
-    console.log('remove Item');
+    dispatch({ type: REMOVE_CART_ITEM, payload: id });
   };
 
   const toggleAmount = (id, value) => {
@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
 
   // Clear the cart
   const clearCart = () => {
-    console.log('Clear Cart');
+    dispatch({ type: CLEAR_CART });
   };
 
   // Add the cart item to localStorage API
