@@ -23,16 +23,18 @@ export default function CartButtons() {
           <span className='cart-value'>{total_items}</span>
         </span>
       </Link>
-
-      <button type='button' className='auth-btn' onClick={loginWithRedirect}>
-        Loggin <FaUserPlus />
-      </button>
-      <button
-        type='button'
-        className='auth-btn'
-        onClick={() => logout({ returnTo: window.location.origin })}>
-        Loggin <FaUserMinus />
-      </button>
+      {!myUser ? (
+        <button type='button' className='auth-btn' onClick={loginWithRedirect}>
+          Login <FaUserPlus />
+        </button>
+      ) : (
+        <button
+          type='button'
+          className='auth-btn'
+          onClick={() => logout({ returnTo: window.location.origin })}>
+          Logout <FaUserMinus />
+        </button>
+      )}
     </Wrapper>
   );
 }
