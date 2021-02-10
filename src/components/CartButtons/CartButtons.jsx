@@ -5,11 +5,14 @@ import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa';
 
 import { useProductsContext } from '../../contexts/products_context';
 import { useCartContext } from '../../contexts/cart_context';
+import { useUserContext } from '../../contexts/user_context';
+
 import { Wrapper } from './CartButtonsStyles';
 
 export default function CartButtons() {
   const { closeSidebar } = useProductsContext();
   const { total_items } = useCartContext();
+  const { loginWithRedirect, logout, myUser } = useUserContext();
 
   return (
     <Wrapper className='cart-btn-wrapper'>
@@ -21,8 +24,14 @@ export default function CartButtons() {
         </span>
       </Link>
 
-      <button type='button' className='auth-btn' onClick={closeSidebar}>
+      <button type='button' className='auth-btn' onClick={loginWithRedirect}>
         Loggin <FaUserPlus />
+      </button>
+      <button
+        type='button'
+        className='auth-btn'
+        onClick={() => logout({ returnTo: window.location.origin })}>
+        Loggin <FaUserMinus />
       </button>
     </Wrapper>
   );
