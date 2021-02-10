@@ -5,4 +5,4 @@ export { default as Checkout } from './CheckoutPage';
 export { default as Products } from './ProductsPage';
 export { default as SingleProduct } from './SingleProductPage';
 export { default as Error } from './ErrorPage';
-export { default as Private } from './PrivateRoute';
+export { default as PrivateRoute } from './PrivateRoute';
