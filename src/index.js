@@ -5,6 +5,7 @@ import './index.css';
 import { ProductsProvider } from './contexts/products_context';
 import { FilterProvider } from './contexts/filter_context';
 import { CartProvider } from './contexts/cart_context';
+import { UserProvider } from './contexts/user_context';
 
 import { Auth0Provider } from '@auth0/auth0-react';
 
@@ -19,13 +20,15 @@ ReactDOM.render(
     clientId='lKbHSCxJckyiLij9oTayNbER5WHeajxs'
     redirectUri={window.location.origin}
     cacheLocation='localstorage'>
-    <ProductsProvider>
-      <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </FilterProvider>
-    </ProductsProvider>
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
   </Auth0Provider>,
   document.getElementById('root')
 );
